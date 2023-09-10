@@ -3,6 +3,6 @@ UTF-8 kódolású legyen
 Magyar szabályok szerinti legyen
 Csapat adattáblából a 21-es azonosítóval rögzített rekord törlése
 Magyar nemzetiségú versenyzők neve megjelenítése abc sorrendben
-Melyik nemzetiség hány fővel képviselte magát ezen a versenyen, az legyen elől aki a legtöbbet indította
+Melyik nemzetiség hány fővel képviselte magát ezen a versenyen, az legyen elől aki a legtöbbet indította, a 2-ik oszlop neve legyen indulokSzama
 Valter Attila egyes szakaszaihoz tartozó idejét jelenití meg szakaszonként rendezve.
-Azon csapatnevek megjelenítése, amelyben egynél több magyar verenyző indult. A magyar versenyzők száma is legyen kiírva.
+Azon csapatnevek megjelenítése, amelyben egynél több magyar verenyző indult. A magyar versenyzők száma is legyen kiírva. A másik oszlop neve magyarokSzama.
