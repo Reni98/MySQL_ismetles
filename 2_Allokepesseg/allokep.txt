@@ -1,0 +1,32 @@
+1. Az allokep_forras.sql állomány tartalmazza az adatbázist és a táblákat létrehozó,
+valamint az adatokat a táblába beszúró SQL-parancsokat! Futtassa az SQL-szerveren
+az allokep_forras.sql parancsfájlt! (A „Nincs kiválasztott adatbázis” üzenet nem
+befolyásolja az adatimportálás sikerességét.)
+
+
+2. Készítsen lekérdezést, amely megadja a „Vas” megyei tanulók számát!
+SELECT megye.letszam FROM megye WHERE megye.nev Like "Vas";
+
+3.Készítsen lekérdezést, amely megadja, hogy „Somogy” megyében hány tanuló vett részt
+a felmérésben!
+SELECT sum(aerob.letszam) FROM megye, aerob WHERE megye.kod = aerob.mkod AND megye.nev="Somogy";
+
+4.Készítsen lekérdezést, amely megadja, hogy összesen hány fiú tanuló kapott egészséges
+besorolást „Zala”
+SELECT aerob.letszam  FROM megye, aerob, allapot
+WHERE megye.kod = aerob.mkod AND aerob.allkod = allapot.kod AND
+megye.nev = "Zala" AND aerob.nem = 1
+AND allapot.nev = "egészséges"
+
+5.Lekérdezés segítségével adja meg, hogy hány megyében van kevesebb tanuló, mint
+„Heves” megyében!
+SELECT COUNT(megye.kod) FROM megye WHERE megye.letszam<( SELECT megye.letszam FROM megye WHERE megye.nev Like "Heves");
+
+6.Lekérdezés segítségével adja meg, hogy „Pest” megyében a tanulók hányadrésze vett részt
+a felmérésben!
+SELECT SUM(aerob.letszam)/megye.letszam FROM aerob, megye WHERE aerob.mkod = megye.kod AND megye.nev= "Pest";
+
+7.Adja meg lekérdezés segítségével, hogy melyik megyében hány „egészséges” besorolást
+kapott lány tanuló van! A lekérdezés a megye nevét és az egészséges tanulók számát adja
+meg ez utóbbi szerint csökkenő sorrendben!
+ű
