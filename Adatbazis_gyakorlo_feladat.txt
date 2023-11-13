@@ -1,0 +1,83 @@
+1.Hozz létre egy adatbázist amit nevezz el elelmiszerbolt-nak.
+2.Hozd létre egy Termek, Ugyfelek, Rendelesek és Rendelt_termekek táblákat.
+
+
+--------Termékek tábla:-----
+
+termék_id (egyedi azonosító)
+név
+kategória 
+ár
+raktáron lévő mennyiség
+
+--------Ügyfelek tábla:------
+
+ügyfél_id (egyedi azonosító)
+név
+cím
+e-mail
+telefonszám
+
+
+--------Rendelések tábla:----------
+
+rendelés_id (egyedi azonosító)
+ügyfél_id (használj idegen kulcsot  és hivatkozz Ugyfelek táblára az ugyfel_id-re )
+dátum
+összeg
+
+--------Rendelt termékek tábla:----
+
+rendelés_id (használj idegen kulcsot és hivatkozz a Rendelések táblábra a rendeles_id-re)
+termék_id (használj idegen kulcsot a Termekek táblára a termek_id-ra)
+mennyiség
+összeg
+
+3.Milyen termék kategóriák vannak?
+4.Kik az ügyfelek, és rendezd abc sorrendbe?
+5.Menyi ügyfelük volt?
+6.Milyen termékek vannak és abból hányat vettek meg?
+7.Melyik ügyfél, mikor, mennyiért rendelt?
+8.Melyik ügyfél milyen terméket és hány db-ot vett?
+
+
+
+
+
+('Uborka', 'Zoldseg', 0.99, 120),
+('Sajt', 'Tejtermek', 3.79, 80),
+('Roston sutott lazac', 'Hal', 9.99, 30),
+('Tojas', 'Tojas', 1.29, 60),
+('Cukor', 'Edesseg', 1.49, 90),
+('Pirítós kenyér', 'Kenyer', 2.29, 100),
+('Tejföl', 'Tejtermek', 1.79, 70)
+
+
+('Bob Johnson', '789 Pine St, Chicago', 'bob.johnson@example.com', '+1 555-123-4567'),
+('Alice Williams', '101 Elm St, San Francisco', 'alice.williams@example.com', '+1 999-888-7777'),
+('Michael Brown', '202 Cedar St, Miami', 'michael.brown@example.com', '+1 111-222-3333'),
+('Emily Davis', '303 Birch St, Houston', 'emily.davis@example.com', '+1 444-555-6666'),
+('David Wilson', '404 Maple St, Atlanta', 'david.wilson@example.com', '+1 777-888-9999'),
+('Olivia Miller', '505 Willow St, Seattle', 'olivia.miller@example.com', '+1 333-444-5555'),
+('Daniel Taylor', '606 Walnut St, Dallas', 'daniel.taylor@example.com', '+1 666-777-8888'),
+('Sophia Brown', '707 Spruce St, Phoenix', 'sophia.brown@example.com', '+1 222-333-4444')
+
+
+(3, '2023-01-17', 22.15),
+(4, '2023-01-18', 5.99),
+(5, '2023-01-19', 14.75),
+(6, '2023-01-20', 8.50),
+(7, '2023-01-21', 19.99),
+(8, '2023-01-22', 3.25),
+(9, '2023-01-23', 11.30),
+(10, '2023-01-24', 6.75)
+
+
+(2, 1, 4, 7.96),
+(2, 2, 1, 2.49),
+(1, 3, 2, 9.96),
+(3, 1, 3, 14.91),
+(3, 2, 4, 19.96),
+(1, 1, 1, 1.99),
+(2, 3, 2, 4.98)
+
