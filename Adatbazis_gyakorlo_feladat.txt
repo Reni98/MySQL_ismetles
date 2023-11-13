@@ -59,8 +59,8 @@ mennyiség
 ('Emily Davis', '303 Birch St, Houston', 'emily.davis@example.com', '+1 444-555-6666'),
 ('David Wilson', '404 Maple St, Atlanta', 'david.wilson@example.com', '+1 777-888-9999'),
 ('Olivia Miller', '505 Willow St, Seattle', 'olivia.miller@example.com', '+1 333-444-5555'),
-('Daniel Taylor', '606 Walnut St, Dallas', 'daniel.taylor@example.com', '+1 666-777-8888'),
-('Sophia Brown', '707 Spruce St, Phoenix', 'sophia.brown@example.com', '+1 222-333-4444')
+('Daniel Taylor', '606 Walnut St, Dallas', 'daniel.taylor@example.com', '+1 666-777-8888')
+
 
 
 (3, '2023-01-17', 22.15),
@@ -69,8 +69,7 @@ mennyiség
 (6, '2023-01-20', 8.50),
 (7, '2023-01-21', 19.99),
 (8, '2023-01-22', 3.25),
-(9, '2023-01-23', 11.30),
-(10, '2023-01-24', 6.75)
+(9, '2023-01-23', 11.30)
 
 
 (2, 1, 4, 7.96),
