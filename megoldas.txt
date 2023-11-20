@@ -1,0 +1,30 @@
+Milyen termék kategóriák vannak:
+SELECT DISTINCT kategoria
+FROM Termek ASC;
+
+Kik az ügyfelek, és rendezd abc sorrendbe: 
+SELECT nev
+FROM Ugyfelek
+ORDER BY nev;
+
+Ügyfelek száma:
+SELECT COUNT(*) AS Ugyfelek_Szama
+FROM Ugyfelek;
+
+Milyen termékek vannak és abból hányat vettek meg:
+SELECT Termek.nev AS Termek_Neve, SUM(Rendelt_termek.mennyiseg) AS Osszeg
+FROM Termek
+LEFT JOIN Rendelt_termek ON Termek.termek_id = Rendelt_termek.termek_id
+GROUP BY Termek_Neve;
+
+Melyik ügyfél, mikor, mennyiért rendelt: 
+SELECT Ugyfelek.nev AS Ugyfel_Neve, Rendelesek.datum AS Rendeles_Datum, Rendelesek.osszeg AS Fizetes
+FROM Ugyfelek
+JOIN Rendelesek ON Ugyfelek.ugyfel_id = Rendelesek.ugyfel_id;
+
+Melyik ügyfél milyen terméket és hány db-ot vett:
+SELECT Ugyfelek.nev AS Ugyfel_Neve, Termek.nev AS Termek_Neve, Rendelt_termek.mennyiseg AS Mennyiseg
+FROM Ugyfelek
+JOIN Rendelesek ON Ugyfelek.ugyfel_id = Rendelesek.ugyfel_id
+JOIN Rendelt_termek ON Rendelesek.rendeles_id = Rendelt_termek.rendeles_id
+JOIN Termek ON Rendelt_termek.termek_id = Termek.termek_id;
